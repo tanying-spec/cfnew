@@ -592,6 +592,9 @@ async function 检查地址可用性(域名760, 端口759 = 443, 超时758 = 200
   }
 }
 async function 获取值备用地址(工作器地区753 = '', 值地区匹配752 = 启用地区匹配) {
+  if (String(工作器地区753).toUpperCase() === 'OFFICIAL') {
+    return 取官方直连地址();
+  }
   if (备用地址列表.length === 0) {
     return 取官方直连地址();
   }
@@ -5440,6 +5443,7 @@ async function 处理订阅值(请求241, 用户240 = null) {
                                 <label style="display: block; margin-bottom: 8px; color: #00f0ff; font-weight: bold; text-shadow: 0 0 3px #00f0ff;">${翻译值.specifyRegion}</label>
                             <select id="wkRegion" style="width: 100%; padding: 12px; background: rgba(0, 0, 0, 0.8); border: 2px solid #00f0ff; color: #00f0ff; font-family: 'Courier New', monospace; font-size: 14px;">
                                     <option value="">${翻译值.autoDetect}</option>
+                                    <option value="OFFICIAL">官方直连</option>
                                     <option value="HK">${翻译值.regionNames.HK}</option>
                                     <option value="US">${翻译值.regionNames.US}</option>
                                     <option value="SG">${翻译值.regionNames.SG}</option>
