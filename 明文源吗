@@ -611,6 +611,7 @@ async function 获取值备用地址(工作器地区753 = '', 值地区匹配752
 }
 function 获取值值(地区747) {
   const 值映射 = {
+    'HK': ['SG', 'JP', 'KR', 'US'],
     'US': ['SG', 'JP', 'KR'],
     'SG': ['JP', 'KR', 'US'],
     'JP': ['SG', 'KR', 'US'],
@@ -625,7 +626,7 @@ function 获取值值(地区747) {
 }
 function 获取值值值值(地区746) {
   const 值值745 = 获取值值(地区746);
-  const 值值744 = ['US', 'SG', 'JP', 'KR', 'DE', 'SE', 'NL', 'FI', 'GB'];
+  const 值值744 = ['HK', 'US', 'SG', 'JP', 'KR', 'DE', 'SE', 'NL', 'FI', 'GB'];
   return [地区746, ...值值745, ...值值744.filter(结果值743 => 结果值743 !== 地区746 && !值值745.includes(结果值743))];
 }
 function 获取值地区值(工作器地区, 可用地址列表, 值地区匹配 = 启用地区匹配) {
